@@ -53,8 +53,8 @@ function HomePage() {
         <div className="row">
             <div className="col-lg-12">
                 <div className="intro-message">
-                    <h1>Effortless Sales, Marketing, and Customer Success</h1>
-                    <h3>Unify Your Business with Antstruct's All-in-One CRM</h3>
+                    <h1>AntStruct is not another CRM System, it gives your business the structure for growth and sustainability</h1>
+                    <h3>Simple to use, collaborate Seamlessly, Drive Performance</h3>
                     <hr className="intro-divider"/>
                     <ul className="list-inline intro-social-buttons">
                         <li>
@@ -83,7 +83,8 @@ function HomePage() {
                 <hr className="section-heading-spacer"/>
                 <div className="clearfix"></div>
                 <h2 className="section-heading">Simplify Your Business Operations with <br/>Antstruct</h2>
-                <p className="lead">Antstruct is an all-encompassing, efficient CRM platform designed to unify your sales, marketing, and customer success teams.</p>
+                <p className="lead">Antstruct is an all-encompassing, efficient management took. It cuts 
+                    across the key life-cycle of your business, geared towards productivity and sustainability.</p>
             </div>
             <div className="col-lg-5 col-lg-offset-2 col-sm-6">
                 <img className="img-responsive" src={ipad} alt=""/>
@@ -103,10 +104,15 @@ function HomePage() {
                 <hr className="section-heading-spacer"/>
                 <div className="clearfix"></div>
                 <h2 className="section-heading">Key Features List:</h2>
-                <p className="lead">Centralize customer interactions and data </p>
-                <p className="lead">Automate routine tasks and workflows </p>
-                <p className="lead">Gain actionable insights with real-time analytics</p>
-                <p className="lead">Collaborate seamlessly with your team</p>
+                <p className="lead">Seamless collaboration across key business life-cycle</p>
+                <ul className="llist-none hover:list-disc">
+                    <li className="lead2">HR</li>
+                    <li className="lead2">Sales & Marketing</li>
+                    <li className="lead2">Finance and Account</li>
+                    <li className="lead2">project Management</li>
+                    <li className="lead2">Customer Service</li>
+                    <li className="lead2">Inventory</li>
+                </ul>
             </div>
             <div className="col-lg-5 col-sm-pull-6  col-sm-6">
                 <img className="img-responsive" src={image1} alt="image1"/>
@@ -126,9 +132,10 @@ function HomePage() {
                 <hr className="section-heading-spacer"/>
                 <div className="clearfix"></div>
                 <h2 className="section-heading">Unlock Business Growth</h2>
+                <p className="lead">Drive and efficient business system, with a result oriented staff base</p>
                 <p className="lead">Manage sales pipelines and forecasts</p>
                 <p className="lead">Run targeted marketing campaigns</p>
-                <p className="lead">Deliver exceptional customer experiences</p>
+                <p className="lead">Deliver exceptional customer experience</p>
             </div>
             <div className="col-lg-5 col-lg-offset-2 col-sm-6">
                 <img className="img-responsive" src={image2} alt="image2"/>
