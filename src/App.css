@@ -64,7 +64,77 @@ a {
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
 }
 
-@media(max-width:767px) {
+.network-main {
+    margin-top: 24px;
+} 
+
+
+/* Buttons Styling */
+ul.intro-social-buttons li {
+    display: inline-block;
+    margin-right: 15px;
+  }
+  
+  ul.intro-social-buttons li:last-child {
+    margin-right: 0;
+  }
+  
+  a.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #ffffff; /* Default text color */
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  a.btn .icon {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  
+  /* Button Colors */
+  .btn-twitter {
+    background-color: #1da1f2;
+    color: white;
+  }
+  
+  .btn-twitter:hover {
+    background-color: #0d8ae3;
+  }
+  
+  .btn-linkedin {
+    background-color: #0077b5;
+    color: white;
+  }
+  
+  .btn-linkedin:hover {
+    background-color: #005582;
+  }
+  
+  .btn-mail {
+    background-color: #3669ea;
+    color: white;
+  }
+  
+  .btn-mail:hover {
+    background-color: #1c55e4;
+  }
+  
+  /* Network Name Styling */
+  .network-name {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+  
+  /* Mobile Responsive Adjustments */
+  @media (max-width: 767px) {
+
     .intro-message {
         padding-bottom: 15%;
     }
@@ -74,30 +144,24 @@ a {
     }
 
     ul.intro-social-buttons > li {
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
+      display: block;
+      margin-bottom: 20px;
+      text-align: center;
     }
-
+  
     ul.intro-social-buttons > li:last-child {
-        margin-bottom: 0;
+      margin-bottom: 0;
+    }
+  
+    a.btn {
+      width: 100%; /* Full-width buttons on mobile */
     }
 
     .intro-divider {
         width: 100%;
     }
-}
-.network-main {
-    margin-top: 24px;
-}
-
-.network-name {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 2px;
-}
-
+  }
+  
 .content-section-a {
     padding: 50px 0;
     background-color: #f8f8f8;
