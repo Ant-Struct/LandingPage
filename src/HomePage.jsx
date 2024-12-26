@@ -17,17 +17,19 @@ function HomePage() {
           setNotification({ show: true, message: 'Please enter a valid email address.', type: 'error' });
           return;
         }
-      
-        try {
-            const requestBody = JSON.stringify({ email: email.trim() });
+          try {
+            const requestBody = JSON.stringify({
+              body: JSON.stringify({ email: email.trim() }),
+            });
             console.log('Request Body:', requestBody);
-          const response = await fetch('https://qmn85zwnd3.execute-api.us-east-1.amazonaws.com/prod/save-email', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: requestBody,
-          });
+        
+            const response = await fetch('https://qmn85zwnd3.execute-api.us-east-1.amazonaws.com/prod/save-email', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: requestBody,
+            });
       
           if (response.ok) {
             setNotification({ show: true, message: 'Thank you for submitting your email!', type: 'success' });
