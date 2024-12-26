@@ -21,6 +21,7 @@ function HomePage() {
             },
             body: JSON.stringify({ email: email.trim() }), // trim() to remove any whitespace
           });
+      
           if (response.ok) {
             setNotification({ show: true, message: 'Thank you for submitting your email!', type: 'success' });
           } else {
@@ -30,12 +31,14 @@ function HomePage() {
         } catch (error) {
           setNotification({ show: true, message: 'An error occurred while saving your email.', type: 'error' });
         }
+      
         setShowModal(false);
         // Automatically hide the alert message after 5 seconds
         setTimeout(() => {
-            setNotification('');
+          setNotification('');
         }, 5000);
       };
+      
   return (
 <div>
 <nav className="navbar navbar-default navbar-fixed-top topnav" role="navigation">
