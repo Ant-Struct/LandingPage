@@ -14,26 +14,24 @@ function HomePage() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('https://qmn85zwnd3.execute-api.us-east-1.amazonaws.com/prod/save-email', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ email }),
-            });
-            if (response.ok) {
-                setNotification({ show: true, message: 'Thank you for submitting your email!', type: 'success' });
-            } else {
-                const errorData = await response.json();
-                setNotification({ show: true, message: `Failed to save email: ${errorData.message}`, type: 'error' });
-            }
+          const response = await fetch('https://qmn85zwnd3.execute-api.us-east-1.amazonaws.com/prod/save-email', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email: email.trim() }), // trim() to remove any whitespace
+          });
+          if (response.ok) {
+            setNotification({ show: true, message: 'Thank you for submitting your email!', type: 'success' });
+          } else {
+            const errorData = await response.json();
+            setNotification({ show: true, message: `Failed to save email: ${errorData.message}`, type: 'error' });
+          }
         } catch (error) {
-            setNotification({ show: true, message: 'An error occurred while saving your email.', type: 'error' });
+          setNotification({ show: true, message: 'An error occurred while saving your email.', type: 'error' });
         }
         setShowModal(false);
-    };
-          
-
+      };
   return (
 <div>
 <nav className="navbar navbar-default navbar-fixed-top topnav" role="navigation">
