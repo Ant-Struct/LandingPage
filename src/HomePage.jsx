@@ -13,15 +13,20 @@ function HomePage() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (!email.trim() || !/\S+@\S+\.\S+/.test(email.trim())) {
+          setNotification({ show: true, message: 'Please enter a valid email address.', type: 'error' });
+          return;
+        }
+      
         try {
+            const requestBody = JSON.stringify({ email: email.trim() });
+            console.log('Request Body:', requestBody);
           const response = await fetch('https://qmn85zwnd3.execute-api.us-east-1.amazonaws.com/prod/save-email', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
             },
-            body: JSON.stringify({
-              body: JSON.stringify({ email: email.trim() }),
-            }),
+            body: requestBody,
           });
       
           if (response.ok) {
@@ -34,12 +39,15 @@ function HomePage() {
           setNotification({ show: true, message: 'An error occurred while saving your email.', type: 'error' });
         }
       
+        // Hide modal after submission
         setShowModal(false);
+      
         // Automatically hide the alert message after 5 seconds
         setTimeout(() => {
           setNotification('');
         }, 5000);
       };
+      
       
   return (
 <div>
