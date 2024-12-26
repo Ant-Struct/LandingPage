@@ -19,7 +19,9 @@ function HomePage() {
             headers: {
               'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ email: email.trim() }), // trim() to remove any whitespace
+            body: JSON.stringify({
+              body: JSON.stringify({ email: email.trim() }),
+            }),
           });
       
           if (response.ok) {
