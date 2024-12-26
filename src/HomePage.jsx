@@ -10,13 +10,29 @@ import { LuMailPlus } from "react-icons/lu";
 function HomePage() {
     const [showModal, setShowModal] = useState(false);
     const [email, setEmail] = useState('');
-  
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      // Add logic to handle email submission
-      console.log(email);
-      setShowModal(false);
-    };
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+          const response = await fetch('https://qmn85zwnd3.execute-api.us-east-1.amazonaws.com/prod/save-email', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email }),
+          });
+          if (response.ok) {
+            alert('Email saved successfully!');
+          } else {
+            const errorData = await response.json();
+            alert(`Failed to save email: ${errorData.message}`);
+          }
+        } catch (error) {
+          alert('An error occurred while saving your email.');
+        }
+        setShowModal(false);
+      };
+          
+
   return (
 <div>
 <nav className="navbar navbar-default navbar-fixed-top topnav" role="navigation">
