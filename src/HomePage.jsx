@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import ipad from './img/ipad.jpg'
 import image1 from './img/peakpx.jpg'
 import image2 from './img/image2.jpg'
@@ -10,27 +9,29 @@ import { LuMailPlus } from "react-icons/lu";
 function HomePage() {
     const [showModal, setShowModal] = useState(false);
     const [email, setEmail] = useState('');
+    const [notification, setNotification] = useState({ show: false, message: '', type: '' });
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-          const response = await fetch('https://qmn85zwnd3.execute-api.us-east-1.amazonaws.com/prod/save-email', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ email }),
-          });
-          if (response.ok) {
-            alert('Email saved successfully!');
-          } else {
-            const errorData = await response.json();
-            alert(`Failed to save email: ${errorData.message}`);
-          }
+            const response = await fetch('https://qmn85zwnd3.execute-api.us-east-1.amazonaws.com/prod/save-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email }),
+            });
+            if (response.ok) {
+                setNotification({ show: true, message: 'Thank you for submitting your email!', type: 'success' });
+            } else {
+                const errorData = await response.json();
+                setNotification({ show: true, message: `Failed to save email: ${errorData.message}`, type: 'error' });
+            }
         } catch (error) {
-          alert('An error occurred while saving your email.');
+            setNotification({ show: true, message: 'An error occurred while saving your email.', type: 'error' });
         }
         setShowModal(false);
-      };
+    };
           
 
   return (
@@ -233,6 +234,11 @@ function HomePage() {
       </form>
     </div>
   </div>
+)}
+{notification.show && (
+    <div className={`notification ${notification.type}`}>
+        {notification.message}
+    </div>
 )}
 </div>
   );
