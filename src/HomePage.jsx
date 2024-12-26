@@ -100,7 +100,7 @@ function HomePage() {
                             </a>
                         </li>
                         <li>
-                            <a href="https://linkedin.com/antstruct" target='_blank' className="btn btn-linkedin btn-lg">
+                            <a href="https://linkedin.com/in/antstruct-solution-84145a343" target='_blank' className="btn btn-linkedin btn-lg">
                             <FaLinkedin className="icon" /> <span className="network-name">LinkedIn</span>
                             </a>
                         </li>
