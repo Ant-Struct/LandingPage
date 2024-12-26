@@ -31,6 +31,10 @@ function HomePage() {
           setNotification({ show: true, message: 'An error occurred while saving your email.', type: 'error' });
         }
         setShowModal(false);
+        // Automatically hide the alert message after 5 seconds
+        setTimeout(() => {
+            setNotification('');
+        }, 5000);
       };
   return (
 <div>
