@@ -20,7 +20,7 @@ function HomePage() {
                 setNotification({ show: true, message: 'Please enter a valid email address.', type: 'error' });
                 return;
               }
-                if (!organization.trim().length < 3) {
+                if (organization.trim().length < 3) {
                   setNotification({ show: true, message: 'Please enter a valid organization name.', type: 'error' });
                   return;
               }
