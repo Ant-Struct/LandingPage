@@ -27,7 +27,7 @@ function HomePage() {
             const requestBody = JSON.stringify({
               body: JSON.stringify({ email: email.trim(), organization: organization.trim() }),
             });
-            console.log('Request Body:', requestBody);
+            //console.log('Request Body:', requestBody);
         
             const response = await fetch('https://qmn85zwnd3.execute-api.us-east-1.amazonaws.com/prod/save-email', {
               method: 'POST',
