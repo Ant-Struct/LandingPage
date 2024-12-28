@@ -9,17 +9,23 @@ import { LuMailPlus } from "react-icons/lu";
 function HomePage() {
     const [showModal, setShowModal] = useState(false);
     const [email, setEmail] = useState('');
+    const [organization, setorganization] = useState('');
     const [notification, setNotification] = useState({ show: false, message: '', type: '' });
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        if (!email.trim() || !/\S+@\S+\.\S+/.test(email.trim())) {
-          setNotification({ show: true, message: 'Please enter a valid email address.', type: 'error' });
-          return;
-        }
-          try {
+        
+        try {
+              e.preventDefault();
+              if (!email.trim() || !/\S+@\S+\.\S+/.test(email.trim())) {
+                setNotification({ show: true, message: 'Please enter a valid email address.', type: 'error' });
+                return;
+              }
+                if (!organization.trim().length < 3) {
+                  setNotification({ show: true, message: 'Please enter a valid organization name.', type: 'error' });
+                  return;
+              }
             const requestBody = JSON.stringify({
-              body: JSON.stringify({ email: email.trim() }),
+              body: JSON.stringify({ email: email.trim(), organization: organization.trim() }),
             });
             console.log('Request Body:', requestBody);
         
@@ -244,6 +250,15 @@ function HomePage() {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter your email address"
           className="form-input"
+          required
+        />
+        <input
+          type="text"
+          value={organization}
+          onChange={(e) => setorganization(e.target.value)}
+          placeholder="Enter your organization"
+          className="form-input"
+          required
         />
         <button type="submit" className="submit-btn">
           Submit
