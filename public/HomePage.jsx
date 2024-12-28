@@ -61,7 +61,7 @@ function HomePage() {
                     <hr className="intro-divider"/>
                     <ul className="list-inline intro-social-buttons">
                         <li>
-                            <a href="https://twitter.com/antstruct" target='_blank' className="btn btn-twitter btn-lg">
+                            <a href="https://x.com/antstruct" target='_blank' className="btn btn-twitter btn-lg">
                             <FaXTwitter className="icon" /> <span className="network-name">Twitter</span>
                             </a>
                         </li>
