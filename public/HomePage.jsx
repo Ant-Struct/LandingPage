@@ -61,7 +61,7 @@ function HomePage() {
                     <hr className="intro-divider"/>
                     <ul className="list-inline intro-social-buttons">
                         <li>
-                            <a href="https://x.com/antstruct" target='_blank' className="btn btn-twitter btn-lg">
+                            <a href="https://x.com/Antstruct" target='_blank' className="btn btn-twitter btn-lg">
                             <FaXTwitter className="icon" /> <span className="network-name">Twitter</span>
                             </a>
                         </li>
@@ -180,9 +180,21 @@ function HomePage() {
                     <li>
                         <a href="#features">Features</a>
                     </li>
-                    <li className="footer-menu-divider">&sdot;</li>
+                    {/* <li className="footer-menu-divider">&sdot;</li> */}
                     <li>
-                        <a href="#contact">Contact</a>
+                        <a href="https://x.com/Antstruct" target='_blank' className="btn btn-twitter btn-lg">
+                            <FaXTwitter className="icon" /> <span className="network-name">Twitter</span>
+                        </a>
+                    </li>
+                    <li>
+                    <   a href="https://linkedin.com/antstruct" target='_blank' className="btn btn-linkedin btn-lg">
+                            <FaLinkedin className="icon" /> <span className="network-name">LinkedIn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:info@antstruct.com" className="btn btn-mail btn-lg">
+                            <LuMailPlus className="icon" /> <span className="network-name">Mail Us</span>
+                        </a>
                     </li>
                 </ul>
                 <p className="copyright text-muted small">Copyright &copy; Anstruct 2024. All Rights Reserved</p>

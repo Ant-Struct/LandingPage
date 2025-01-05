@@ -83,7 +83,7 @@ ul.intro-social-buttons li {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 20px;
+    padding: 20px 40px;
     border-radius: 5px;
     font-size: 16px;
     text-decoration: none;
@@ -112,7 +112,7 @@ ul.intro-social-buttons li {
   }
   
   .btn-linkedin:hover {
-    background-color: #005582;
+    background-color: #0189d2;
   }
   
   .btn-mail {
@@ -121,7 +121,7 @@ ul.intro-social-buttons li {
   }
   
   .btn-mail:hover {
-    background-color: #1c55e4;
+    background-color: #507ff7;
   }
   
   /* Network Name Styling */
