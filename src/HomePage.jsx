@@ -222,7 +222,21 @@ function HomePage() {
                     </li>
                     <li className="footer-menu-divider">&sdot;</li>
                     <li>
-                        <a href="#contact">Contact</a>
+                        <a href="https://twitter.com/antstruct" target='_blank' className="">
+                        <FaXTwitter className="icon" /> 
+                        </a>
+                    </li>
+                    <li className="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="https://linkedin.com/in/antstruct-solution-84145a343" target='_blank' className="">
+                        <FaLinkedin className="icon" /> 
+                        </a>
+                    </li>
+                    <li className="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="mailto:info@antstruct.com" className="">
+                        <LuMailPlus className="icon" /> 
+                        </a>
                     </li>
                 </ul>
                 <p className="copyright text-muted small">Copyright &copy; Anstruct 2024. All Rights Reserved</p>
