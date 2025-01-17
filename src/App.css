@@ -110,9 +110,18 @@ ul.intro-social-buttons li {
     background-color: #0077b5;
     color: white;
   }
-  
+
   .btn-linkedin:hover {
     background-color: #0189d2;
+  }
+  
+  .btn-facebook {
+    background-color: #116795;
+    color: white;
+  }
+
+  .btn-facebook:hover {
+    background-color: #0f95dd;
   }
   
   .btn-mail {

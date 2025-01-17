@@ -111,6 +111,11 @@ function HomePage() {
                             </a>
                         </li>
                         <li>
+                            <a href="https://web.facebook.com/people/Antstruct/61572204901195/" target='_blank' className="btn btn-facebook btn-lg">
+                            <FaFacebook className="icon" /> <span className="network-name">Facebook</span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="mailto:info@antstruct.com" className="btn btn-mail btn-lg">
                             <LuMailPlus className="icon" /> <span className="network-name">Mail Us</span>
                             </a>
