@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ipad from './img/ipad.jpg'
 import image1 from './img/peakpx.jpg'
 import image2 from './img/image2.jpg'
-import { FaXTwitter } from "react-icons/fa6";
+import { FaFacebook, FaXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { LuMailPlus } from "react-icons/lu";
 
@@ -228,8 +228,14 @@ function HomePage() {
                     </li>
                     <li className="footer-menu-divider">&sdot;</li>
                     <li>
-                        <a href="https://linkedin.com/in/antstruct-solution-84145a343" target='_blank' className="">
+                        <a href="https://linkedin.com/company/antstruct/about/" target='_blank' className="">
                         <FaLinkedin className="icon" /> 
+                        </a>
+                    </li>
+                    <li className="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="https://web.facebook.com/people/Antstruct/61572204901195/" target='_blank' className="">
+                        <FaFacebook className="icon" /> 
                         </a>
                     </li>
                     <li className="footer-menu-divider">&sdot;</li>
